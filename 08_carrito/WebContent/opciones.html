@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+ function direccionar(){
+	 var botonCompra=document.getElementsByName("comprar").value;
+	 var botonVerCarrito=document.getElementsByName("carrito").value;
+	 if(botonCompra!=null){
+		 window.location.href="comprar.html";
+	 }
+	 if(botonVerCarrito!=null){
+		 window.location.href="vercarrito.jsp";
+	 }
+ }
+</script>
+<body>
+<center>
+<br/>
+<br/>
+<br/>
+ 
+ <input type="button" name="comprar" value="Comprar"   onclick="direccionar()" />
+ <input type="button" name="carrito" value="Ver Carrito"  onclick="direccionar()"/>
+
+</center>
+</body>
+</html>
