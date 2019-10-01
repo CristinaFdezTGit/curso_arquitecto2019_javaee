@@ -14,6 +14,10 @@
 <body>
 <c:set var="listContacto" value="${requestScope.contactos}" />
 
+<div>
+<c:choose>
+ <c:when test="${not empty requestScope.contactos}">
+ 
 <table border="1">
 <caption>Lista de Contactos</caption>
    <tr>
@@ -35,8 +39,14 @@
  </tr>
     
  </c:forEach> 
- 
  </table>
+ 
+ </c:when>
+ <c:otherwise>
+  <h2>Sin contactos</h2>
+ </c:otherwise>
+</c:choose>
+ </div>
 <br>
 <br>
 <a href="entrada.html"> volver</a>
