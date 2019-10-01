@@ -29,7 +29,7 @@ public class ContactosAction extends HttpServlet {
 		stream.println("--->Entra en ContactosAction!!");
 		List<Contacto> listaContacto=FactoryDAO.getDaoContactos().listarContactos();
 		stream.println("--->tamaño listaContacto:"+listaContacto.size());
-		if(!listaContacto.isEmpty()) {
+		if(null!=listaContacto && !listaContacto.isEmpty()) {
 			 request.setAttribute("resultado", 1);
 			 request.setAttribute("contactos", listaContacto);
 		 }else {
