@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:set var="listContacto" value="${RequestScope.contactos}" />
+<c:set var="listContacto" value="${requestScope.contactos}" />
 
 <table border="1">
 <caption>Lista de Contactos</caption>
